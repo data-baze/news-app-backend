@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const News = require("../models/News");
 
-// Get paginated news (infinite scroll)
+// Get news
 router.get("/", async (req, res) => {
   try {
     const { page = 1, limit = 3 } = req.query;
@@ -28,7 +28,7 @@ router.get("/tag/:tag", async (req, res) => {
   }
 });
 
-// Get single news item and update views
+// get news with id
 router.get("/:id", async (req, res) => {
   try {
     const news = await News.findByIdAndUpdate(
@@ -42,7 +42,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// Create news (Admin only)
+// Create news
 router.post("/", async (req, res) => {
   try {
     const news = new News(req.body);

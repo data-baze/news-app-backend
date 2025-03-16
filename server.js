@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const morgan = require("morgan");
 
-const newsRoutes = require("./routes/newsRoutes");
+const newsRoutes = require("./routes/newsRoute");
 
 const app = express();
 app.use(express.json());
