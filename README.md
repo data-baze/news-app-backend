@@ -36,7 +36,7 @@
 5. **Run the backend server**
 
    ```sh
-   npm run dev
+   nodemon server.js
    ```
 
 6. **API will be available at**
